@@ -24,11 +24,19 @@ arraySum(sum);
 // Exercise 2 Section
 console.log("EXERCISE 2:\n==========\n");
 
-const book = {};
-(book.title = "The Institute"),
-  (book.author = "Stephen King"),
-  (book.noOfPages = 557),
-  (book.readCount = "one");
+// Using Dot Notation to assign
+// const book = {};
+// (book.title = "The Institute"),
+//   (book.author = "Stephen King"),
+//   (book.noOfPages = 557),
+//   (book.readCount = "one");
+
+const book = {
+title: "The Institute",
+author: "Stephen King",
+noOfPages: 557,
+readCount: "one"
+}
 
 book.info = function () {
   return `${this.title} was written by ${this.author} and has ${this.noOfPages} pages. Hayden has read ${this.title}
