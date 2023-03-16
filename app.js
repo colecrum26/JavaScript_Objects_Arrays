@@ -5,12 +5,12 @@ console.log("EXERCISE 1:\n==========\n");
 
 const arr1 = [2, 22, 12, 17, 18, 39, 129];
 let sum = 0;
-function arraySum(sum){
-    for (let i = 0; i < arr1.length; i++){
-        sum += arr1[i];
-        console.log(sum)
-    }
-    return sum;
+function arraySum(sum) {
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr1[i];
+    console.log(sum);
+  }
+  return sum;
 }
 
 arraySum(sum);
@@ -24,4 +24,15 @@ arraySum(sum);
 // Exercise 2 Section
 console.log("EXERCISE 2:\n==========\n");
 
+const book = {};
+(book.title = "The Institute"),
+  (book.author = "Stephen King"),
+  (book.noOfPages = 557),
+  (book.readCount = "one");
 
+book.info = function () {
+  return `${this.title} was written by ${this.author} and has ${this.noOfPages} pages. Hayden has read ${this.title}
+${this.readCount} time(s).`;
+};
+
+console.log(book.info());
