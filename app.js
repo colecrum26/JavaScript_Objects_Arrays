@@ -15,10 +15,11 @@ function arraySum(sum){
 
 arraySum(sum);
 
-arr1.forEach((sum, i, arr1) => {
-    sum += arr1[i];
-    console.log(sum);
-})
+// HIGHER ORDER FUNCTIONS
+// arr1.forEach((sum) => {
+//     sum += sum;
+//     console.log(sum);
+// })
 
 // Exercise 2 Section
 console.log("EXERCISE 2:\n==========\n");
