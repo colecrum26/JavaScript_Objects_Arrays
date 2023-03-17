@@ -65,22 +65,44 @@ console.log("EXERCISE 3:\n==========\n");
 
 
 // In Class Attempt
-let sentence = "The quick brown fox jumps over the lazy dog";
+// let sentence = "The quick brown fox jumps over the lazy dog";
 
-function reverseWord(sentence) {
-  let result = [];
-  let words = sentence.split(" ");
-  console.log("these are the words split", words);
-  for (let i = 0; i < words.length; i++){
-    let letters = words[i].split('');
-    console.log("these are the letters split", letters);
-    for (let j = letters.length -1; j >= 0; j--) {
-      result.push(letters[j]);
-      console.log("this is after push for result", result)
-    }
-    result.push(" ");
-  }
-  return result.join('');
-}
+// function reverseWord(sentence) {
+//   let result = [];
+//   let words = sentence.split(" ");
+//   console.log("these are the words split", words);
+//   for (let i = 0; i < words.length; i++){
+//     let letters = words[i].split('');
+//     console.log("these are the letters split", letters);
+//     for (let j = letters.length -1; j >= 0; j--) {
+//       result.push(letters[j]);
+//       console.log("this is after push for result", result)
+//     }
+//     result.push(" ");
+//   }
+//   return result.join('');
+// }
 
-console.log(reverseWord(sentence));
+// console.log(reverseWord(sentence));
+
+// Exercise 4
+console.log("EXERCISE 4:\n==========\n");
+
+// Practice with parsing CSV
+// let xCelData ="type,weakness\nlightning,rock\nghost,dark\nfire,water"
+
+// const head1 = xCelData.split('\n')[0].split(',')[0]
+// .slice
+// const data = xCelData.split('\n').slice();
+// console.log(data);
+
+let csvData = "name,age\nFrodo,50\nSam,38\nMerry,36\nPippin,26";
+
+const arr = csvData.split('\n')
+console.log(arr);
+const head = csvData.split('\n')[0].split(',')
+console.log(head);
+// for (i = 0; i < csvData.length - 1; i++){
+//   data = csvData.split('\n')[];
+//   console.log(data);
+// }
