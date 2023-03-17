@@ -43,7 +43,7 @@ book.info = function () {
 ${this.readCount} time(s).`;
 };
 
-// console.log(book.info());
+console.log(book.info());
 
 // Exercise 3
 console.log("EXERCISE 3:\n==========\n");
@@ -63,27 +63,26 @@ console.log("EXERCISE 3:\n==========\n");
 // }
 // console.log(result);
 
-
 // In Class Attempt
-// let sentence = "The quick brown fox jumps over the lazy dog";
+let sentence = "The quick brown fox jumps over the lazy dog";
 
-// function reverseWord(sentence) {
-//   let result = [];
-//   let words = sentence.split(" ");
-//   console.log("these are the words split", words);
-//   for (let i = 0; i < words.length; i++){
-//     let letters = words[i].split('');
-//     console.log("these are the letters split", letters);
-//     for (let j = letters.length -1; j >= 0; j--) {
-//       result.push(letters[j]);
-//       console.log("this is after push for result", result)
-//     }
-//     result.push(" ");
-//   }
-//   return result.join('');
-// }
+function reverseWord(sentence) {
+  let result = [];
+  let words = sentence.split(" ");
+  console.log("these are the words split", words);
+  for (let i = 0; i < words.length; i++) {
+    let letters = words[i].split("");
+    console.log("these are the letters split", letters);
+    for (let j = letters.length - 1; j >= 0; j--) {
+      result.push(letters[j]);
+      console.log("this is after push for result", result);
+    }
+    result.push(" ");
+  }
+  return result.join("");
+}
 
-// console.log(reverseWord(sentence));
+console.log(reverseWord(sentence));
 
 // Exercise 4
 console.log("EXERCISE 4:\n==========\n");
@@ -116,21 +115,21 @@ console.log("EXERCISE 4:\n==========\n");
 
 let csvData = "name,age\nFrodo,50\nSam,38\nMerry,36\nPippin,26";
 
-myArr = []
+myArr = [];
 
-const arr = csvData.split('\n');
-const head1 = csvData.split('\n')[0].split(',')[0]
-const head2 = csvData.split('\n')[0].split(',')[1]
-const data = csvData.split('\n').slice(1);
+const arr = csvData.split("\n");
+const head1 = csvData.split("\n")[0].split(",")[0];
+const head2 = csvData.split("\n")[0].split(",")[1];
+const data = csvData.split("\n").slice(1);
 const myObj = {
   [head1]: "",
-  [head2]: ""
-}
+  [head2]: "",
+};
 data.forEach((ele) => {
-  let dataVal = ele.split(",")
+  let dataVal = ele.split(",");
   let dataObj = Object.create(myObj);
   dataObj[head1] = dataVal[0];
   dataObj[head2] = dataVal[1];
-  myArr.push(dataObj)
-}); 
+  myArr.push(dataObj);
+});
 console.log(myArr);
