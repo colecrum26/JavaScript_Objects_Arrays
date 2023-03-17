@@ -92,17 +92,45 @@ console.log("EXERCISE 4:\n==========\n");
 // let xCelData ="type,weakness\nlightning,rock\nghost,dark\nfire,water"
 
 // const head1 = xCelData.split('\n')[0].split(',')[0]
-// .slice
-// const data = xCelData.split('\n').slice();
-// console.log(data);
+// const head2 = xCelData.split('\n')[0].split(',')[1]
+// // .slice
+// const data = xCelData.split('\n').slice(1);
+// myArr = []
+
+// // console.log(data);
+// const myObj = {
+//   [head1]: "",
+//   [head2]: ""
+// }
+// data.forEach((val)=>{
+//   let dataVal = val.split(",")
+//   let dataObj = Object.create(myObj);
+//   dataObj[head1] = dataVal[0];
+//   dataObj[head2] = dataVal[1];
+//   myArr.push(dataObj)
+// })
+
+// console.log(myArr);
+
+// Actual Exercise
 
 let csvData = "name,age\nFrodo,50\nSam,38\nMerry,36\nPippin,26";
 
-const arr = csvData.split('\n')
-console.log(arr);
-const head = csvData.split('\n')[0].split(',')
-console.log(head);
-// for (i = 0; i < csvData.length - 1; i++){
-//   data = csvData.split('\n')[];
-//   console.log(data);
-// }
+myArr = []
+
+const arr = csvData.split('\n');
+const head1 = csvData.split('\n')[0].split(',')[0]
+const head2 = csvData.split('\n')[0].split(',')[1]
+const data = csvData.split('\n').slice(1);
+const myObj = {
+  [head1]: "",
+  [head2]: ""
+}
+data.forEach((ele) => {
+  let dataVal = ele.split(",")
+  let dataObj = Object.create(myObj);
+  dataObj[head1] = dataVal[0];
+  dataObj[head2] = dataVal[1];
+  myArr.push(dataObj)
+}); 
+console.log(myArr);
